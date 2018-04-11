@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.friend_display {
+    width: 580px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.labels {
+    display: inline-block;
+    color: purple;
+}
+
+.values {
+    display: inline-block;
+}
+
+#add_box {
+    width: 580px;
+    margin: 10px;
+}
+#add_box p {
+    display: inline_block;
+    margin: 10px, 10px, 10px, 200px;
+    
+}
+.input_box {
+    display: inline-block;
+    margin: 10px;
+}
+
+table {
+    width: 580px;
+}
+
+table th{
+    background-color: darkgrey;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#add_btn {
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-left: 400px;
+}

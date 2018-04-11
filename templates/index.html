@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Friends</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}">
+		$(document).ready(function(){
+
+		});
+        </script>   
+	</head>
+	<body>
+		<div id="wrapper">
+            <h1>Friends:</h1>
+            <div id=friend_box>
+                <div class= "friend_display">
+                
+                    <table>
+                        <tr>
+                            <th>Name</th> 
+                            <th>Age</th>
+                            <th>Friend since</th>
+                            <th></th>
+                        </tr>
+                        {%for i in friends:%}
+                            <tr>
+                                <td>{{i.first_name}} {{i.last_name}}</td>
+                                <td>{{i.age}}</td>
+                                <td>{{i.created_at.strftime("%B %d")}}</td>
+                                <td>{{i.created_at.year}}</td>
+                            </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div>
+
+            <div id= "add_box">
+                <h1>Add a friend:</h1>
+                <form action="create_friend" method = "post">
+                    <p>Name: <input type=text name="name" class="input_box"></p>  
+                    <p>Age: <input type=text name="age" class="input_box"></p>
+                    <input type="submit" value="Submit" id= "add_btn">
+                </form>
+            </div>
+            
+        </div><!--end of wrapper-->
+	</body>
+</html>
